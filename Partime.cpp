@@ -18,4 +18,5 @@ void Partime::setHour(int hour) {
 
 void Partime::putData() {
     Staff::putData();
+    cout << "Hours worked per week: " << getHour() << endl;
 }
