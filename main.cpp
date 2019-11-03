@@ -40,5 +40,9 @@ int main() {
     partime3.putData();
     cout << endl;
 
+    Employee employee[9] = *Employee[9];
+    Employee *employee[9];
+    Employee employee[0] = new Staff("Allen","Paita","123","M","2/23/59",50.00);
+
     return 0;
 }
