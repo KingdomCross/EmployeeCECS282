@@ -57,6 +57,6 @@ void Employee::setBirthDate(const string &birthDate) {
     Employee::birthDate = birthDate;
 }
 
-void Employee::monthlySalary() {
-
+float Employee::monthlySalary() {
+    return FACULTY_MONTHLY_SALARY;
 }

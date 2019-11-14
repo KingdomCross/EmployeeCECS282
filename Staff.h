@@ -14,8 +14,8 @@ public:
           const string &birthDate, double hourlyRate);
     double getHourlyRate() const;
     void setHourlyRate(double hourlyRate);
-    void monthlySalary(){
-        cout << "Staff\n";
+    float monthlySalary(){
+        return STAFF_MONTHLY_HOURS_WORKED * hourlyRate;
     };
     void putData();
 protected:

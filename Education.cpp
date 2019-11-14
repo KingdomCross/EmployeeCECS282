@@ -31,10 +31,6 @@ void Education::setResearch(int research) {
     Education::research = research;
 }
 
-void Education::monthlySalary() {
-
-}
-
 void Education::putData() {
     cout << "Degree: " << getDegree() << endl;
     cout << "Major: " << getMajor() << endl;

@@ -1,3 +1,7 @@
+/**
+ * Alex Chheng
+ * CECS 277 Lab 7
+ */
 #include "Employee.h"
 #include "Staff.h"
 #include "Education.h"
@@ -50,29 +54,28 @@ int main() {
     employee[6] = new Partime("Guzman","Augusto", "455", "F", "8/10/77", 35.00, 30);
     employee[7] = new Partime("Depirro","Martin", "678", "F", "9/15/87", 30.00, 15);
     employee[8] = new Partime("Aldaco","Marque", "945", "M", "11/24/88", 20.00, 35);
+    //All partime $8800
 
-    employee[0]->putData();
-    cout << endl;
-    employee[1]->putData();
-    cout << endl;
-    employee[2]->putData();
-    cout << endl;
-    employee[3]->putData();
-    cout << endl;
-    employee[4]->putData();
-    cout << endl;
-    employee[5]->putData();
-    cout << endl;
-    employee[6]->putData();
-    cout << endl;
-    employee[7]->putData();
-    cout << endl;
-    employee[8]->putData();
-    cout << endl;
+    for (auto & i : employee){
+        if (typeid(*i) == typeid(Staff)){
+            i->putData();
+            cout << "Monthly Earning: $" << i->monthlySalary() << endl;
+            cout << endl;
+        }
 
-    /*Employee employee[9] = mem Employee[9];
-    Employee *employee[9];
-    Employee employee[0] = new Staff("Allen","Paita","123","M","2/23/59",50.00);*/
+        else if (typeid(*i) == typeid(Faculty)){
+            i->putData();
+            cout << "Monthly Earning: $" << i->monthlySalary() << endl;
+            cout << endl;
+        }
 
+        else if (typeid(*i) == typeid(Partime)){
+            i->putData();
+            cout << "Monthly Earning: $" << i->monthlySalary() << endl;
+            cout << endl;
+        }
+    }
     return 0;
+
+    //return accumulate partime monthly salaries
 }

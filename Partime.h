@@ -13,8 +13,8 @@ public:
             const string &birthDate, int hourlyRate, int hour);
     int getHour() const;
     void setHour(int hour);
-    void montlySalary(){
-        cout << "Partime\n";
+    int montlySalary(){
+        return hour * hourlyRate * 4;
     };
     void putData();
 protected:

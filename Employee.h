@@ -6,8 +6,10 @@
 #define EMPLOYEECECS282_EMPLOYEE_H
 
 #include <iostream>
-
 using namespace std;
+
+float const FACULTY_MONTHLY_SALARY = 5000.00;
+int const STAFF_MONTHLY_HOURS_WORKED = 160;
 
 class Employee {
 public:
@@ -24,7 +26,7 @@ public:
     void setSex(const string &sex);
     const string &getBirthDate() const;
     void setBirthDate(const string &birthDate);
-    virtual void monthlySalary();
+    virtual float monthlySalary();
 protected:
     string lastname;
     string firstname;

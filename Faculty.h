@@ -14,8 +14,20 @@ public:
             const string &birthDate, const string &degree, const string &major, int research, const string &level);
     const string &getLevel() const;
     void setLevel(const string &level);
-    void montlySalary(){
+    float monthlySalary(){
         cout << "Faculty\n";
+        if(level == "Assistant"){
+            return FACULTY_MONTHLY_SALARY;
+        }
+        else if(level == "Associate"){
+            return FACULTY_MONTHLY_SALARY * 1.2;
+        }
+        else if(level == "Full"){
+            return FACULTY_MONTHLY_SALARY * 1.4;
+        }
+        else{
+            return 0;
+        }
     };
     void putData();
 protected:

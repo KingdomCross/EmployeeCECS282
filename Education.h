@@ -18,7 +18,6 @@ public:
     void setMajor(const string &major);
     int getResearch() const;
     void setResearch(int research);
-    void monthlySalary();
     void putData();
 protected:
     string degree;
