@@ -13,7 +13,7 @@ public:
             const string &birthDate, int hourlyRate, int hour);
     int getHour() const;
     void setHour(int hour);
-    int montlySalary(){
+    float monthlySalary(){
         return hour * hourlyRate * 4;
     };
     void putData();

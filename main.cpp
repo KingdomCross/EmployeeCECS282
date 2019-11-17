@@ -56,26 +56,32 @@ int main() {
     employee[8] = new Partime("Aldaco","Marque", "945", "M", "11/24/88", 20.00, 35);
     //All partime $8800
 
+    float totalPartimeSalary = 0;
+
     for (auto & i : employee){
         if (typeid(*i) == typeid(Staff)){
+            cout << "Staff" << endl;
             i->putData();
             cout << "Monthly Earning: $" << i->monthlySalary() << endl;
             cout << endl;
         }
 
         else if (typeid(*i) == typeid(Faculty)){
+            cout << "Faculty" << endl;
             i->putData();
             cout << "Monthly Earning: $" << i->monthlySalary() << endl;
             cout << endl;
         }
 
         else if (typeid(*i) == typeid(Partime)){
+            cout << "Part Time" << endl;
             i->putData();
             cout << "Monthly Earning: $" << i->monthlySalary() << endl;
+            totalPartimeSalary += i->monthlySalary();
             cout << endl;
         }
     }
-    return 0;
+    cout << "Monthly Part Time Earning: $" << totalPartimeSalary << endl; //return accumulated part time salary
 
-    //return accumulate partime monthly salaries
+    return 0;
 }

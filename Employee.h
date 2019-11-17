@@ -15,7 +15,8 @@ class Employee {
 public:
     Employee(const string &lastname, const string &firstname, const string &iDnumber, const string &sex,
              const string &birthDate);
-    void putData();
+
+    virtual void putData();
     const string &getLastname() const;
     void setLastname(const string &lastname);
     const string &getFirstname() const;
